@@ -1,0 +1,22 @@
+tableData: [{
+            number: '01',
+            authority: 'root',
+            desciption: 'root权限',
+        
+          }, {
+            number: '02',
+            authority: 'admin',
+            desciption: 'admin权限'
+          }, {
+            number: '03',
+            authority: 'admin',
+            desciption: 'admin权限'
+          }, {
+            number: '04',
+            authority: 'admin',
+            desciption: 'admin权限'
+          }]
+        
+
+
+ 
