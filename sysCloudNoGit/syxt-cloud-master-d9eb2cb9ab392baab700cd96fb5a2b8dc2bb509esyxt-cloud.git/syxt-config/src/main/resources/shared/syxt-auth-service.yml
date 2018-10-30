@@ -1,0 +1,21 @@
+spring:
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://192.168.10.88:3306/auth?useUnicode=true&characterEncoding=utf8&useSSL=true
+    username: root
+    password: root
+  jpa:
+    hibernate:
+      ddl-auto: update 
+    show-sql: true
+      
+server:
+  context-path: /uaa
+  port: 5000
+
+notification-service:
+  clientSecret: notification-service
+statistics-service:
+  clientSecret: statistics-service
+base-service:
+  clientSecret: base-service

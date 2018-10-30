@@ -1,0 +1,23 @@
+security:
+  oauth2:
+    client:
+      clientId: syxt-statistics-service
+      clientSecret: statistics-service
+      accessTokenUri: http://auth-service:5000/uaa/oauth/token
+      grant-type: client_credentials
+      scope: server
+spring:
+  data:
+    mongodb:
+      host: mongodb
+      username: user
+      password: statistics-mongodb
+      database: piggymetrics
+      port: 27000
+
+server:
+  context-path: /statistics
+  port: 7000
+
+rates:
+  url: http://api.fixer.io

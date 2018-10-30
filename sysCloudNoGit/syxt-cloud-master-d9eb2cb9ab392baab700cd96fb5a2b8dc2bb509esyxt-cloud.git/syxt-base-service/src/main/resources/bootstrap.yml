@@ -1,0 +1,9 @@
+spring:
+  application:
+    name: syxt-base-service
+  cloud:
+    config:
+      uri: http://config:8888
+      fail-fast: true
+      password: config
+      username: user

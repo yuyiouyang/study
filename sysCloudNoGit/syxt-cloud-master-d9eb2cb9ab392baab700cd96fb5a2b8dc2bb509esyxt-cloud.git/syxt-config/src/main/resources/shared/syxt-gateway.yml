@@ -1,0 +1,45 @@
+hystrix:
+  command:
+    default:
+      execution:
+        isolation:
+          thread:
+            timeoutInMilliseconds: 20000
+
+ribbon:
+  ReadTimeout: 20000
+  ConnectTimeout: 20000
+
+zuul:
+  ignoredServices: '*'
+  host:
+    connect-timeout-millis: 20000
+    socket-timeout-millis: 20000
+
+  routes:
+    auth-service:
+        path: /uaa/**
+        url: http://auth-service:5000
+        stripPrefix: false
+        sensitiveHeaders:
+
+    base-service:
+        path: /base/**
+        serviceId: syxt-base-service
+        stripPrefix: false
+        sensitiveHeaders:
+
+    statistics-service:
+        path: /statistics/**
+        serviceId: syxt-statistics-service
+        stripPrefix: false
+        sensitiveHeaders:
+
+    notification-service:
+        path: /notifications/**
+        serviceId: syxt-notification-service
+        stripPrefix: false
+        sensitiveHeaders:
+
+server:
+  port: 4000

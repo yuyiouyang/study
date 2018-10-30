@@ -1,0 +1,23 @@
+security:
+  oauth2:
+    client:
+      clientId: syxt-base-service
+      clientSecret: base-service
+      accessTokenUri: http://auth-service:5000/uaa/oauth/token
+      grant-type: client_credentials
+      scope: server
+ 
+spring:
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://192.168.10.88:3306/syxt?useUnicode=true&characterEncoding=utf8&useSSL=true
+    username: root
+    password: root
+  jpa:
+    hibernate:
+      ddl-auto: update 
+    show-sql: true
+
+server:
+  context-path: /base
+  port: 6000
